@@ -209,13 +209,11 @@ files, and 404 handling.
 
 ## Learnings
 
-> *Replace this section with your own words before submitting.*
-
-- How coordinate reference systems work, and why measuring in degrees gives meaningless results.
-- Structuring a FastAPI project into routes, services and data layers.
-- Handling untrusted file uploads safely (size limits, zip-slip, XML attacks).
-- Designing APIs that degrade gracefully: one bad feature should not break a whole file.
-- Writing tests that verify results against an independent calculation (geodesic area/length).
+- I learned that latitude/longitude are angles, not distances, so I had to convert shapes to a metre-based projection (UTM) before measuring area and length.
+- I learned how to build a REST API with FastAPI and organise the code into routes, services and a database layer.
+- I learned how to set up a project on GitHub Codespaces, commit with Git, and push code to a repository.
+- I learned why tests matter: I compared my results against an independent geodesic calculation to check they were accurate.
+- I learned to handle bad input safely, so one broken feature or a corrupt file doesn't crash the whole API.
 
 ## Future scope
 
